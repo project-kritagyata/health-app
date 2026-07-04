@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "NutriTrack",
+    "slug": "nutritrack-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1F6F5C"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nutritrack.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "NutriTrack uses your camera to scan meal photos and estimate calories. Photos are only used at the moment you scan.",
+        "NSMotionUsageDescription": "NutriTrack reads your step count from Health/Motion data to show daily step progress."
+      }
+    },
+    "android": {
+      "package": "com.nutritrack.app",
+      "permissions": ["CAMERA", "ACTIVITY_RECOGNITION"],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1F6F5C"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "NutriTrack uses your camera to scan meal photos and estimate calories."
+        }
+      ],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "NutriTrack reads your step count to show daily step progress."
+        }
+      ],
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.PASTE_YOUR_IOS_CLIENT_ID_NUMBER_HERE"
+        }
+      ]
+    ]
+  }
+}

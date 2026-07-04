@@ -1,0 +1,6 @@
+{
+  "name": "nutritrack-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Serverless functions that hold the Anthropic API key server-side for the NutriTrack mobile app."
+}
